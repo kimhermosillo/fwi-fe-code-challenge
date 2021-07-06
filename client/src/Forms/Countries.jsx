@@ -3,7 +3,7 @@ import { COUNTRIES } from '../constants';
 
 const Countries = () => (
   <>
-    <option value="">--Please choose a country--</option>
+    <option value="">Select Country</option>
     {Object.keys(COUNTRIES).map((countryCode) => {
       return (
         <option key={countryCode} value={countryCode}>

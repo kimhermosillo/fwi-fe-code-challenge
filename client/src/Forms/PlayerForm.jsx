@@ -1,20 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import { useHistory } from 'react-router-dom';
 
+import './Forms.scss';
 import Countries from './Countries';
+
+const defaultState = {
+  name: '',
+  country: '',
+  winnings: 0,
+  imageUrl: '',
+};
 
 const PlayerForm = ({ text, initialValues, onSubmit, onDelete }) => {
   const { push } = useHistory();
 
   return (
     <Formik
-      initialValues={{
-        name: '',
-        country: '',
-        winnings: 0,
-        imageUrl: '',
-      }}
+      initialValues={initialValues || defaultState}
       onSubmit={(values) => onSubmit(values)}
     >
       <div className="player-form-container">
@@ -26,11 +29,21 @@ const PlayerForm = ({ text, initialValues, onSubmit, onDelete }) => {
             name="name"
             placeholder="Name"
           />
-          <Field as="select" className="player-form__input" name="country">
+          <Field
+            as="select"
+            className="player-form__input"
+            name="country"
+            placeholder="Country"
+          >
             <Countries />
           </Field>
           <label htmlFor="winnings">Winnings:</label>
-          <Field className="player-form__input" type="number" name="winnings" />
+          <Field
+            className="player-form__input"
+            type="number"
+            name="winnings"
+            placeholder="Winnings"
+          />
           <Field
             className="player-form__input"
             type="text"

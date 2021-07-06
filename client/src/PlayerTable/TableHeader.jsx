@@ -10,7 +10,9 @@ const TableHeader = () => (
     <thead>
       <tr role="row">
         <th role="columnheader" className="table__header table__avatar">
-          <Link to="add-player">+</Link>
+          <Link style={{ textDecoration: 'none' }} to="add-player">
+            +
+          </Link>
         </th>
         <th role="columnheader" className="table__header table__avatar" />
         <th role="columnheader" className="table__header table__player">

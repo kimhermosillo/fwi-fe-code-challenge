@@ -1,0 +1,27 @@
+@import 'variables';
+
+$header-height: 2.5rem;
+
+.player-form-container {
+  padding-top: calc(#{$header-height} + 1px); // 1px for border of header
+}
+
+.player-form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+
+  &__input {
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    margin-left: 0.5rem;
+  }
+}
