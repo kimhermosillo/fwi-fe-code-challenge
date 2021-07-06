@@ -260,9 +260,10 @@ const INITIAL_DATA_FILE = path.join(__dirname, '..', 'initialData.json');
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const DATA_FILE = path.join(DATA_DIR, 'index.json');
 
+// can revert back to 25 if adding pagination
 const PLAYER_LIST_DEFAULTS = {
   from: 0,
-  size: 25,
+  size: 40,
 };
 const PLAYER_SORTABLE_FIELDS = ['name', 'country', 'winnings'];
 const SORT_ORDER_ASC = 'asc';
