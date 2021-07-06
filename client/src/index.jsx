@@ -6,6 +6,7 @@ import './index.scss';
 import App from './App';
 import rootReducer from './appState/index';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Switch } from 'react-router-dom';
 
 const store = createStore(
   rootReducer,
@@ -16,7 +17,11 @@ const store = createStore(
 ReactDOM.render(
   <StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <Switch>
+          <App />
+        </Switch>
+      </BrowserRouter>
     </Provider>
   </StrictMode>,
   document.getElementById('root')

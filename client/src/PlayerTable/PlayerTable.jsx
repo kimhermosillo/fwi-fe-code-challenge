@@ -26,6 +26,8 @@ const PlayerTable = () => {
 
   const players = useSelector(getPlayers);
 
+  console.log(players);
+
   return (
     <div
       id="player-table-grid"
